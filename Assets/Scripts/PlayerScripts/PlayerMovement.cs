@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     public float speed;
     public float playerRadius;
     Rigidbody2D rb;
@@ -11,6 +13,15 @@ public class PlayerMovement : MonoBehaviour
     List<Vector2> path;
     bool shouldBeMoving;
     int ipath;
+    GameObject currentTarget;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -33,12 +44,18 @@ public class PlayerMovement : MonoBehaviour
             if (UF.DistanceBetween2Units(transform.position, goal) < 0.05f)
             {
                 StopMoving();
+                if (currentTarget != null)
+                {
+                    currentTarget.SendMessage("Activate");
+                    currentTarget = null;
+                }
             }
         }
     }
 
     public void Move(List<Vector2> newPath, Vector2 newGoal)
     {
+        currentTarget = null;
         newGoal = CorrectGoal(newGoal);
         newPath.Add(newGoal);
         path = newPath;
@@ -55,6 +72,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         shouldBeMoving = false;
+    }
+
+    public void GoActivate(List<Vector2> newPath, Vector2 newGoal, GameObject target)
+    {
+        Move(newPath, newGoal);
+        currentTarget = target;
     }
 
     bool CheckForCollider(Vector2 start, Vector2 pointToCheck)
