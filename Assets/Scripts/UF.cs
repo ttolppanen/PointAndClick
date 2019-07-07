@@ -21,9 +21,9 @@ public class UF
         return Physics2D.Raycast(mousePos, Vector2.zero);
     }
 
-    public static GameObject FetchGameObject(Vector2 pos)
+    public static GameObject FetchGameObject(Vector2 pos, int layerMask = ~0)
     {
-        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, layerMask);
         if (hit.collider == null)
         {
             return null;
@@ -53,5 +53,21 @@ public class UF
     public static float DistanceBetween2Units(Vector3 posA, Vector3 posB)
     {
         return ((Vector2)(posA) - (Vector2)(posB)).magnitude;
+    }
+
+    public static Vector2 ClosestPoint(Vector2 start, List<Vector2> possibleGoals)
+    {
+        float shortestDistance = Mathf.Infinity;
+        Vector2 bestPoint = possibleGoals[0];
+        foreach (Vector2 point in possibleGoals)
+        {
+            float distance = (start - point).magnitude;
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                bestPoint = point;
+            }
+        }
+        return bestPoint;
     }
 }
