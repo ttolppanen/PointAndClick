@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     bool CheckForCollider(Vector2 start, Vector2 pointToCheck)
     {
         Vector2 direction = pointToCheck - start;
-        RaycastHit2D hit = Physics2D.CircleCast(start, playerRadius, direction.normalized, direction.magnitude);
+        RaycastHit2D hit = Physics2D.CircleCast(start, playerRadius, direction.normalized, direction.magnitude, LayerMask.GetMask("MapColliders"));
         Debug.DrawRay(start, direction);
         if (hit.collider != null)
         {
@@ -94,12 +94,12 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 CorrectGoal(Vector2 goal)
     {
-        RaycastHit2D hit = Physics2D.CircleCast(goal, playerRadius, Vector2.zero);
+        RaycastHit2D hit = Physics2D.CircleCast(goal, playerRadius, Vector2.zero, LayerMask.GetMask("MapColliders"));
         if (hit.collider == null)
         {
             return goal;
         }
-        hit = Physics2D.Raycast(goal, hit.point - goal);
+        hit = Physics2D.Raycast(goal, hit.point - goal, LayerMask.GetMask("MapColliders"));
         goal += (goal - hit.point).normalized * (playerRadius - (goal - hit.point).magnitude);
         return CorrectGoal(goal);
     }
