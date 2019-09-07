@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,12 +10,19 @@ public class PlayerController : MonoBehaviour
 
     public MapData map;
 
+    [Header("Text Settings")]
+    public float textFlatTime;
+    public float textMultiplierTime;
+    TextMeshPro textScript;
+    IEnumerator OnGoingTextCoroutine;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        textScript = transform.GetChild(1).GetComponent<TextMeshPro>();
     }
 
     private void Start()
@@ -45,11 +53,28 @@ public class PlayerController : MonoBehaviour
             {
                 somethingUnderMouse.SendMessage("GiveActivationCommand");
             }
-            
+
         }
     }
     public void SetMap()
     {
         map = GameObject.FindWithTag("Map").GetComponent<MapData>();
+    }
+
+    public void SayText(string text)
+    {
+        if (OnGoingTextCoroutine != null)
+        {
+            StopCoroutine(OnGoingTextCoroutine);
+        }
+        OnGoingTextCoroutine = TextCoroutine(text);
+        StartCoroutine(OnGoingTextCoroutine);
+    }
+
+    IEnumerator TextCoroutine(string text)
+    {
+        textScript.text = text;
+        yield return new WaitForSeconds(textFlatTime + textMultiplierTime * text.Length);
+        textScript.text = "";
     }
 }
