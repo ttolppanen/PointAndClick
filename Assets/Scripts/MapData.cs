@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class MapData : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MapData : MonoBehaviour
 
     private void Start()
     {
+        PlayerController.instance.map = this;
         Transform tileMapObject = transform.GetChild(0);
         sceneTiles = tileMapObject.GetComponent<Tilemap>();
         //tileMapObject.gameObject.SetActive(false);

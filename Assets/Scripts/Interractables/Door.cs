@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public List<Vector2> activationPlaces;
-    public string SceneToLoad;
+    public string sceneToLoad;
+    public Vector2 spawnPoint;
 
     public void GiveActivationCommand()
     {
@@ -31,15 +32,8 @@ public class Door : MonoBehaviour
 
     public void Activate()
     {
-        StartCoroutine(LoadScene());
-    }
-
-    IEnumerator LoadScene()
-    {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneToLoad);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
+        SceneManager.LoadScene(sceneToLoad);
+        PlayerController player = PlayerController.instance;
+        player.transform.position = spawnPoint;
     }
 }

@@ -21,6 +21,11 @@ public class PlayerController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
         textScript = transform.GetChild(1).GetComponent<TextMeshPro>();
     }

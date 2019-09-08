@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2807217916681490034}
   - component: {fileID: 2807217916681490035}
-  - component: {fileID: 6960685918325591891}
+  - component: {fileID: 1449497102479773427}
   - component: {fileID: 2807217916681490032}
   m_Layer: 0
   m_Name: MapTemplate
@@ -253,7 +253,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!212 &6960685918325591891
+--- !u!212 &1449497102479773427
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -23,7 +23,7 @@ public class UF
 
     public static GameObject FetchGameObject(Vector2 pos, int layerMask = ~0)
     {
-        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 0, layerMask);
         if (hit.collider == null)
         {
             return null;

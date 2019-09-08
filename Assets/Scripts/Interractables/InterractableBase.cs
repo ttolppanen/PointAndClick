@@ -15,9 +15,8 @@ public class InterractableBase : MonoBehaviour
         else
         {
             Vector2 playerPos = PlayerController.instance.transform.position;
-            Vector2 closestPoint = UF.ClosestPoint(playerPos, activationPlaces);
+            Vector2 goal = UF.ClosestPoint(playerPos, activationPlaces);
             Vector2Int start = UF.CoordinatePosition(playerPos);
-            Vector2 goal = closestPoint;
             List<Vector2> path = PlayerController.instance.map.AStarPathFinding(start, UF.CoordinatePosition(goal));
             if (path.Count != 0)
             {
