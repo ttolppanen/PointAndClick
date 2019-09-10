@@ -16,12 +16,12 @@ public class Dagger : MonoBehaviour
         {
             Vector2 playerPos = PlayerController.instance.transform.position;
             Vector2 closestPoint = UF.ClosestPoint(playerPos, MakeActivationPlacesList());
-            Vector2Int start = UF.CoordinatePosition(playerPos);
+            Vector2 start = playerPos;
             Vector2 goal = closestPoint;
-            List<Vector2> path = PlayerController.instance.map.AStarPathFinding(start, UF.CoordinatePosition(goal));
+            List<Vector2> path = PlayerController.instance.map.FindPath(start, goal);
             if (path.Count != 0)
             {
-                PlayerMovement.instance.GoActivate(path, goal, gameObject);
+                PlayerMovement.instance.GoActivate(path, gameObject);
             }
         }
     }

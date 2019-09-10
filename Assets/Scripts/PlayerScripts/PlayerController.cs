@@ -46,12 +46,12 @@ public class PlayerController : MonoBehaviour
             GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
             if (somethingUnderMouse == null) //Jos hiiren alla ei ole mitään niin liikutaan
             {
-                Vector2Int start = UF.CoordinatePosition(transform.position);
+                Vector2 start = transform.position;
                 Vector2 goal = mousePosition;
-                List<Vector2> path = map.AStarPathFinding(start, UF.CoordinatePosition(goal));
+                List<Vector2> path = map.FindPath(start, goal);
                 if (path.Count != 0)
                 {
-                    PlayerMovement.instance.Move(path, goal);
+                    PlayerMovement.instance.Move(path);
                 }
             }
             else

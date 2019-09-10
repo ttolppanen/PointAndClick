@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (shouldBeMoving)
         {
-            if (ipath < path.Count - 1 && !CheckForCollider(transform.position, path[ipath + 1]))
+            if (ipath < path.Count - 1 && !UF.CheckForMapCollider(transform.position, path[ipath + 1]))
             {
                 ipath++;
             }
@@ -53,13 +53,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Move(List<Vector2> newPath, Vector2 newGoal)
+    public void Move(List<Vector2> newPath)
     {
         currentTarget = null;
-        newGoal = CorrectGoal(newGoal);
-        newPath.Add(newGoal);
         path = newPath;
-        goal = newGoal;
+        goal = newPath[newPath.Count - 1];
         shouldBeMoving = true;
         ipath = 0;
         if (ipath >= path.Count)
@@ -74,33 +72,9 @@ public class PlayerMovement : MonoBehaviour
         shouldBeMoving = false;
     }
 
-    public void GoActivate(List<Vector2> newPath, Vector2 newGoal, GameObject target)
+    public void GoActivate(List<Vector2> newPath, GameObject target)
     {
-        Move(newPath, newGoal);
+        Move(newPath);
         currentTarget = target;
-    }
-
-    bool CheckForCollider(Vector2 start, Vector2 pointToCheck)
-    {
-        Vector2 direction = pointToCheck - start;
-        RaycastHit2D hit = Physics2D.CircleCast(start, playerRadius, direction.normalized, direction.magnitude, LayerMask.GetMask("MapColliders"));
-        Debug.DrawRay(start, direction);
-        if (hit.collider != null)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    Vector2 CorrectGoal(Vector2 goal)
-    {
-        RaycastHit2D hit = Physics2D.CircleCast(goal, playerRadius, Vector2.zero, LayerMask.GetMask("MapColliders"));
-        if (hit.collider == null)
-        {
-            return goal;
-        }
-        hit = Physics2D.Raycast(goal, hit.point - goal, LayerMask.GetMask("MapColliders"));
-        goal += (goal - hit.point).normalized * (playerRadius - (goal - hit.point).magnitude);
-        return CorrectGoal(goal);
     }
 }

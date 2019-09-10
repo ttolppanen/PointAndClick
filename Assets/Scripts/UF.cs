@@ -36,7 +36,12 @@ public class UF
 
     public static Vector2Int CoordinatePosition(Vector3 pos)
     {
-        return new Vector2Int(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y));
+        return new Vector2Int(Mathf.FloorToInt(pos.x / GameManager.coordinateSize.x), Mathf.FloorToInt(pos.y / GameManager.coordinateSize.y));
+    }
+
+    public static Vector2 FromCoordinatesToWorld(Vector2 pos)
+    {
+        return new Vector2(pos.x * GameManager.coordinateSize.x, pos.y * GameManager.coordinateSize.y) + GameManager.coordinateSize / 2;
     }
 
     public static bool IsOnUI()
@@ -69,5 +74,17 @@ public class UF
             }
         }
         return bestPoint;
+    }
+
+    public static bool CheckForMapCollider(Vector2 start, Vector2 pointToCheck)
+    {
+        Vector2 direction = pointToCheck - start;
+        RaycastHit2D hit = Physics2D.Raycast(start, direction.normalized, direction.magnitude, LayerMask.GetMask("MapColliders"));
+        //Debug.DrawRay(start, direction);
+        if (hit.collider != null)
+        {
+            return true;
+        }
+        return false;
     }
 }

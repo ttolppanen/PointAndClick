@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MapData : MonoBehaviour
 {
-    Tilemap sceneTiles;
+    EdgeCollider2D walls;
+    PolygonCollider2D walkableArea;
 
     private void Start()
     {
         PlayerController.instance.map = this;
-        Transform tileMapObject = transform.GetChild(0);
-        sceneTiles = tileMapObject.GetComponent<Tilemap>();
-        //tileMapObject.gameObject.SetActive(false);
+        walls = GetComponent<EdgeCollider2D>();
+        walkableArea = transform.GetChild(0).gameObject.AddComponent<PolygonCollider2D>();
+        walkableArea.points = walls.points;
     }
 
     float HeuresticEstimate(Vector2Int a, Vector2Int b)
@@ -22,27 +23,61 @@ public class MapData : MonoBehaviour
         return BtoA.magnitude;
     }
 
-    //Tässä tehdään myös polusta oikein muotoinenm eli siirretään pisteet keskelle tiileä, eli polunPiste + (0.5, 0.5)...
+    //Tässä tehdään myös polusta oikein muotoinenm eli siirretään pisteet keskelle tiileä, eli polunPiste + (0.5, 0.5) --> Tämän jälkeen muutetaan koordinaateista oikeiksi pisteiksi!
     List<Vector2> ReconstructPath(IDictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int current)
     {
         List<Vector2> totalPath = new List<Vector2>();
-        totalPath.Add(current + new Vector2(0.5f, 0.5f));
+        totalPath.Add(current);
         List<Vector2Int> keys = new List<Vector2Int>(cameFrom.Keys);
         while (keys.Contains(current))//alkupistettä ei koskaan tule cameFrommiinn....
         {
             current = cameFrom[current];
-            totalPath.Add(current + new Vector2(0.5f, 0.5f));
+            totalPath.Add(current);
         }
         totalPath.Reverse();
+        for (int i = 0; i < totalPath.Count; i++)
+        {
+            totalPath[i] = UF.FromCoordinatesToWorld(totalPath[i]);
+        }
         return totalPath;
     }
 
-    public List<Vector2> AStarPathFinding(Vector2Int start, Vector2Int goal)
+    bool IsInsideMap(Vector2 point)
     {
-        if (sceneTiles.GetTile((Vector3Int)goal) == null)
+        return walkableArea.OverlapPoint(point);
+    }
+
+    public List<Vector2> FindPath(Vector2 start, Vector2 goal)
+    {
+        if (!IsInsideMap(goal))
         {
-            return new List<Vector2>() {};
+            return new List<Vector2>() { };
         }
+        if (!IsInsideMap(UF.FromCoordinatesToWorld(UF.CoordinatePosition(start))))
+        {
+            start = CorrectStart(start);
+        }
+        List<Vector2> path = AStarPathFinding(UF.CoordinatePosition(start), UF.CoordinatePosition(goal), goal);
+        path.Add(goal);
+        return path;
+    }
+
+    Vector2 CorrectStart(Vector2 start)
+    {
+        Vector2[] pointsToCheck = new Vector2[4] {new Vector2(GameManager.coordinateSize.x, 0), new Vector2(-GameManager.coordinateSize.x, 0), new Vector2(0, GameManager.coordinateSize.y), new Vector2(0, -GameManager.coordinateSize.y) };
+        foreach (Vector2 pointToCheck in pointsToCheck)
+        {
+            Vector2 point = start + pointToCheck;
+            if (IsInsideMap(point) && !UF.CheckForMapCollider(start, point))
+            {
+                return point;
+            }
+        }
+        return start;
+    }
+
+    List<Vector2> AStarPathFinding(Vector2Int start, Vector2Int goal, Vector2 realGoal)
+    {
         List<Vector2Int> closedSet = new List<Vector2Int>(); //Pisteet jotka on jo tutkittu?
         List<Vector2Int> openSet = new List<Vector2Int>(); //Pisteet mitkä pitää tutkia?
         openSet.Add(start);
@@ -54,7 +89,7 @@ public class MapData : MonoBehaviour
         while (openSet.Count != 0)
         {
             Vector2Int current = SmallestFScoreFromOpenSet(openSet, fScore);
-            if (current == goal)
+            if (current == goal || !UF.CheckForMapCollider(UF.FromCoordinatesToWorld(current), realGoal))
             {
                 return ReconstructPath(cameFrom, current);
             }
@@ -88,13 +123,13 @@ public class MapData : MonoBehaviour
         return new List<Vector2>(); //Jos ei löydy polkua niin tulee tyhjä lista...
     }
 
-    List<Vector2Int> FindNeighbors(Vector2Int point) //Versio missä ei tarvitse antaa Rakennuksen pisteitä
+    List<Vector2Int> FindNeighbors(Vector2Int point)
     {
         List<Vector2Int> neighbors = new List<Vector2Int>();
         for (int iy = -1; iy <= 1; iy++)
         {
             Vector2Int pointBeingChecked = new Vector2Int(point.x, point.y + iy);
-            if (sceneTiles.GetTile((Vector3Int)pointBeingChecked) != null && iy != 0)
+            if (!UF.CheckForMapCollider(UF.FromCoordinatesToWorld(point), UF.FromCoordinatesToWorld(pointBeingChecked)))
             {
                 neighbors.Add(pointBeingChecked);
             }
@@ -102,7 +137,7 @@ public class MapData : MonoBehaviour
         for (int ix = -1; ix <= 1; ix++)
         {
             Vector2Int pointBeingChecked = new Vector2Int(point.x + ix, point.y);
-            if (sceneTiles.GetTile((Vector3Int)pointBeingChecked) != null && ix != 0)
+            if (!UF.CheckForMapCollider(UF.FromCoordinatesToWorld(point), UF.FromCoordinatesToWorld(pointBeingChecked)))
             {
                 neighbors.Add(pointBeingChecked);
             }
