@@ -24,7 +24,7 @@ public class MapData : MonoBehaviour
     }
 
     //Tässä tehdään myös polusta oikein muotoinenm eli siirretään pisteet keskelle tiileä, eli polunPiste + (0.5, 0.5) --> Tämän jälkeen muutetaan koordinaateista oikeiksi pisteiksi!
-    List<Vector2> ReconstructPath(IDictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int current)
+    List<Vector2> ReconstructPath(IDictionary<Vector2Int, Vector2Int> cameFrom, Vector2Int current, Vector2 goal)
     {
         List<Vector2> totalPath = new List<Vector2>();
         totalPath.Add(current);
@@ -39,6 +39,7 @@ public class MapData : MonoBehaviour
         {
             totalPath[i] = UF.FromCoordinatesToWorld(totalPath[i]);
         }
+        totalPath.Add(goal);
         return totalPath;
     }
 
@@ -53,12 +54,17 @@ public class MapData : MonoBehaviour
         {
             return new List<Vector2>() { };
         }
+        GameObject mapColliderUnderGoal = UF.FetchGameObject(goal, LayerMask.GetMask("MapColliders"));
+        if (mapColliderUnderGoal != null)
+        {
+            Vector2 closestPointFromCollider = mapColliderUnderGoal.GetComponent<Collider2D>().bounds.ClosestPoint(start);
+            goal = closestPointFromCollider + (start - closestPointFromCollider).normalized * 0.01f;
+        }
         if (!IsInsideMap(UF.FromCoordinatesToWorld(UF.CoordinatePosition(start))))
         {
             start = CorrectStart(start);
         }
         List<Vector2> path = AStarPathFinding(UF.CoordinatePosition(start), UF.CoordinatePosition(goal), goal);
-        path.Add(goal);
         return path;
     }
 
@@ -67,7 +73,7 @@ public class MapData : MonoBehaviour
         Vector2[] pointsToCheck = new Vector2[4] {new Vector2(GameManager.coordinateSize.x, 0), new Vector2(-GameManager.coordinateSize.x, 0), new Vector2(0, GameManager.coordinateSize.y), new Vector2(0, -GameManager.coordinateSize.y) };
         foreach (Vector2 pointToCheck in pointsToCheck)
         {
-            Vector2 point = start + pointToCheck;
+            Vector2 point = UF.FromCoordinatesToWorld(UF.CoordinatePosition(start)) + pointToCheck;
             if (IsInsideMap(point) && !UF.CheckForMapCollider(start, point))
             {
                 return point;
@@ -89,9 +95,13 @@ public class MapData : MonoBehaviour
         while (openSet.Count != 0)
         {
             Vector2Int current = SmallestFScoreFromOpenSet(openSet, fScore);
-            if (current == goal || !UF.CheckForMapCollider(UF.FromCoordinatesToWorld(current), realGoal))
+            if (current == goal)
             {
-                return ReconstructPath(cameFrom, current);
+                return ReconstructPath(cameFrom, current, realGoal);
+            }
+            else if ((current - goal).magnitude <= 2 && !UF.CheckForMapCollider(UF.FromCoordinatesToWorld(current), realGoal))
+            {
+                return ReconstructPath(cameFrom, current, realGoal);
             }
             openSet.Remove(current);
             closedSet.Add(current);

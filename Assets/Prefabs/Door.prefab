@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationPlaces:
-  - {x: 5, y: 2}
-  - {x: 6, y: 2}
+  - {x: 6, y: 3}
   sceneToLoad: Room1
   spawnPoint: {x: 1, y: 1.5}

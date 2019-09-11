@@ -80,7 +80,7 @@ public class UF
     {
         Vector2 direction = pointToCheck - start;
         RaycastHit2D hit = Physics2D.Raycast(start, direction.normalized, direction.magnitude, LayerMask.GetMask("MapColliders"));
-        //Debug.DrawRay(start, direction);
+        Debug.DrawRay(start, direction);
         if (hit.collider != null)
         {
             return true;

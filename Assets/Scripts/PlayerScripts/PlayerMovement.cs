@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
 
     public float speed;
-    public float playerRadius;
     Rigidbody2D rb;
     Vector2 goal;
     List<Vector2> path;
