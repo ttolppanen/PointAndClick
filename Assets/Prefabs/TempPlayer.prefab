@@ -213,10 +213,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1189055170524807668}
-  - component: {fileID: 8680822047282665542}
-  - component: {fileID: 7898222952465751334}
+  - component: {fileID: 6475472877075829860}
   - component: {fileID: 360365376230495528}
-  - component: {fileID: 1758083209}
+  - component: {fileID: 3491925546928848684}
   - component: {fileID: 1845587742}
   - component: {fileID: 1880596542}
   m_Layer: 0
@@ -242,7 +241,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &8680822047282665542
+--- !u!50 &6475472877075829860
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -263,20 +262,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7898222952465751334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529611339856726397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40edd706346cdd643a4ce441bf1c92c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  map: {fileID: 0}
 --- !u!114 &360365376230495528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +277,7 @@ MonoBehaviour:
   textScript: {fileID: 477521403}
   textFlatTime: 0.8
   textMultiplierTime: 0.5
---- !u!114 &1758083209
+--- !u!114 &3491925546928848684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,9 +286,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529611339856726397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1494e4fb9b5b9be439d11183a740325f, type: 3}
+  m_Script: {fileID: 11500000, guid: 40edd706346cdd643a4ce441bf1c92c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  map: {fileID: 0}
 --- !u!114 &1845587742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +337,7 @@ GameObject:
   - component: {fileID: 1387242256017196824}
   - component: {fileID: 6311950624356376144}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5620433673128608536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.031, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1189055170524807668}

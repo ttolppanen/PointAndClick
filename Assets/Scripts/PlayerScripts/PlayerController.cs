@@ -20,11 +20,10 @@ public class PlayerController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 
@@ -49,9 +48,7 @@ public class PlayerController : MonoBehaviour
         GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
         if (somethingUnderMouse == null) //Jos hiiren alla ei ole mitään niin liikutaan
         {
-            Vector2 start = transform.position;
-            Vector2 goal = mousePosition;
-            PlayerMovement.instance.Move(transform.position, goal);
+            PlayerMovement.instance.Move(mousePosition);
         }
         else
         {

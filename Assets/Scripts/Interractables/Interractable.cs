@@ -15,10 +15,9 @@ public class Interractable : MonoBehaviour
         }
         else
         {
-            Vector2 playerPos = PlayerController.instance.transform.position;
+            Vector2 playerPos = PlayerMovement.instance.transform.position;
             Vector2 goal = UF.ClosestPoint(playerPos, activationPlaces);
-            Vector2 start = playerPos;
-            PlayerMovement.instance.GoActivate(start, goal, gameObject);
+            PlayerMovement.instance.GoActivate(goal, gameObject);
         }   
     }
 

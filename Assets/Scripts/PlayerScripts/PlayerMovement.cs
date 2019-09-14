@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (shouldBeMoving)
         {
-            if (ipath < path.Count - 1 && !UF.CheckForMapCollider(transform.position, path[ipath + 1]))
+            while (ipath < path.Count - 1 && !UF.CheckForMapCollider(transform.position, path[ipath + 1]))
             {
                 ipath++;
             }
@@ -46,10 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (Mathf.Abs(movementDirection.x) > Mathf.Abs(movementDirection.y))
             {
-                if(movementDirection.x >0)
+                if(movementDirection.x > 0)
                 {
                     animator.SetInteger("Direction", 2);
-
                 }
                 else
                 {
@@ -66,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     animator.SetInteger("Direction", 3);
                 }
-
             }
             
             if (UF.DistanceBetween2Units(transform.position, goal) < 0.05f)
@@ -79,13 +77,11 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
-
     }
 
-    public void Move(Vector2 start, Vector2 goal)
+    public void Move(Vector2 goal)
     {
-        List<Vector2> newPath = map.FindPath(start, goal);
+        List<Vector2> newPath = map.FindPath(transform.position, goal);
         if (newPath.Count != 0)
         {
             animator.SetBool("Moving", true);
@@ -108,9 +104,9 @@ public class PlayerMovement : MonoBehaviour
         shouldBeMoving = false;
     }
 
-    public void GoActivate(Vector2 start, Vector2 goal, GameObject target)
+    public void GoActivate(Vector2 goal, GameObject target)
     {
-        Move(start, goal);
+        Move(goal);
         currentTarget = target;
     }
 }

@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour
 
     private void Update()
     {
-        Vector3 whereCameraShouldBe = Vector3.Lerp(transform.position, PlayerController.instance.transform.position + Vector3.up, followSpeed * Time.deltaTime);
+        Vector3 whereCameraShouldBe = Vector3.Lerp(transform.position, PlayerMovement.instance.transform.position + Vector3.up, followSpeed * Time.deltaTime);
         Vector3 pos = whereCameraShouldBe;
 
         if (whereCameraShouldBe.x < XminMax[0] + size.x)
