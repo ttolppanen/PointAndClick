@@ -11,7 +11,7 @@ public class MapData : MonoBehaviour
 
     private void Start()
     {
-        PlayerController.instance.map = this;
+        PlayerMovement.instance.map = this;
         walls = GetComponent<EdgeCollider2D>();
         walkableArea = transform.GetChild(0).gameObject.AddComponent<PolygonCollider2D>();
         walkableArea.points = walls.points;

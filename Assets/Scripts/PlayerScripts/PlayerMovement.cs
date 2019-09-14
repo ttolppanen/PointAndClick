@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
 
     public float speed;
+    public MapData map;
     Rigidbody2D rb;
     Vector2 goal;
     List<Vector2> path;
@@ -52,17 +53,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Move(List<Vector2> newPath)
+    public void Move(Vector2 start, Vector2 goal)
     {
-        currentTarget = null;
-        path = newPath;
-        goal = newPath[newPath.Count - 1];
-        shouldBeMoving = true;
-        ipath = 0;
-        if (ipath >= path.Count)
+        List<Vector2> newPath = map.FindPath(start, goal);
+        if (newPath.Count != 0)
         {
-            StopMoving();
+            currentTarget = null;
+            path = newPath;
+            this.goal = newPath[newPath.Count - 1];
+            shouldBeMoving = true;
+            ipath = 0;
+            if (ipath >= path.Count)
+            {
+                StopMoving();
+            }
         }
+        
     }
 
     void StopMoving()
@@ -71,9 +77,9 @@ public class PlayerMovement : MonoBehaviour
         shouldBeMoving = false;
     }
 
-    public void GoActivate(List<Vector2> newPath, GameObject target)
+    public void GoActivate(Vector2 start, Vector2 goal, GameObject target)
     {
-        Move(newPath);
+        Move(start, goal);
         currentTarget = target;
     }
 }
