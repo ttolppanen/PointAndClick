@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
                 StopMoving();
             }
         }
-        
     }
 
     void StopMoving()

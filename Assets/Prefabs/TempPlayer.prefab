@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  map: {fileID: 0}
 --- !u!114 &360365376230495528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf0077102074d24fbce0039878d4262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
+  textScript: {fileID: 477521403}
   textFlatTime: 0.8
   textMultiplierTime: 0.5
 --- !u!114 &1758083209

@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024728775, y: 0.38329756}
+  m_Offset: {x: 0.07322693, y: 0.0404526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1978312, y: 1.89024}
+  m_Size: {x: 1.4916983, y: 0.551512}
   m_EdgeRadius: 0
 --- !u!114 &5900758713412402825
 MonoBehaviour:
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationPlaces:
-  - {x: 6, y: 3}
-  sceneToLoad: Room1
-  spawnPoint: {x: 1, y: 1.5}
+  - {x: 6, y: 1}
+  key: 0
+  sceneToLoad: Room2
+  spawnPoint: {x: 1.5, y: 1.5}
