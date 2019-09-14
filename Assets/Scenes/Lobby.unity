@@ -346,16 +346,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1529611339856726397, guid: 97d06ea561c73664889a69d4135b9e4e,
-        type: 3}
-      propertyPath: m_Name
-      value: TempPlayer
+    - target: {fileID: 477521405, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1529611339856726397, guid: 97d06ea561c73664889a69d4135b9e4e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 477521406, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef17cab9c46975a429ee12bd6c89a682, type: 2}
+    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
+      propertyPath: inventoryImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 658590223}
+    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
+      propertyPath: inventoryImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 713283681}
+    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
+      propertyPath: inventoryImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 2145857158}
     - target: {fileID: 1189055170524807668, guid: 97d06ea561c73664889a69d4135b9e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -411,22 +421,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 477521405, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
-      propertyPath: m_Mesh
-      value: 
+    - target: {fileID: 1529611339856726397, guid: 97d06ea561c73664889a69d4135b9e4e,
+        type: 3}
+      propertyPath: m_Name
+      value: TempPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
-      propertyPath: inventoryImages.Array.data[0]
-      value: 
-      objectReference: {fileID: 658590223}
-    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
-      propertyPath: inventoryImages.Array.data[1]
-      value: 
-      objectReference: {fileID: 713283681}
-    - target: {fileID: 1845587742, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
-      propertyPath: inventoryImages.Array.data[2]
-      value: 
-      objectReference: {fileID: 2145857158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
 --- !u!114 &2145857158 stripped
