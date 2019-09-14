@@ -216,6 +216,8 @@ GameObject:
   - component: {fileID: 8680822047282665542}
   - component: {fileID: 7898222952465751334}
   - component: {fileID: 360365376230495528}
+  - component: {fileID: 1758083209}
+  - component: {fileID: 1845587742}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Untagged
@@ -273,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  playerRadius: 0.2
+  map: {fileID: 0}
 --- !u!114 &360365376230495528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +288,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf0077102074d24fbce0039878d4262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
+  textScript: {fileID: 477521403}
   textFlatTime: 0.8
   textMultiplierTime: 0.5
+--- !u!114 &1758083209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529611339856726397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1494e4fb9b5b9be439d11183a740325f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1845587742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529611339856726397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d349138b2bfb224e81b0bd7468e2b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5620433673128608536
 GameObject:
   m_ObjectHideFlags: 0

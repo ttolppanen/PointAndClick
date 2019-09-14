@@ -8,12 +8,11 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
-    public MapData map;
-
+    PlayerMovement PM;
     [Header("Text Settings")]
+    public TextMeshPro textScript;
     public float textFlatTime;
     public float textMultiplierTime;
-    TextMeshPro textScript;
     IEnumerator OnGoingTextCoroutine;
 
     private void Awake()
@@ -27,43 +26,37 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        textScript = transform.GetChild(1).GetComponent<TextMeshPro>();
     }
 
     private void Start()
     {
-        if (map == null)
-        {
-            SetMap();
-        }
+        PM = PlayerMovement.instance;
     }
 
     private void Update()
     {
+        if (UF.IsOnUI()) { return; }
+
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition = UF.GetMousePos();
-            GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
-            if (somethingUnderMouse == null) //Jos hiiren alla ei ole mitään niin liikutaan
-            {
-                Vector2Int start = UF.CoordinatePosition(transform.position);
-                Vector2 goal = mousePosition;
-                List<Vector2> path = map.AStarPathFinding(start, UF.CoordinatePosition(goal));
-                if (path.Count != 0)
-                {
-                    PlayerMovement.instance.Move(path, goal);
-                }
-            }
-            else
-            {
-                somethingUnderMouse.SendMessage("GiveActivationCommand");
-            }
-
+            OnMouseLeftClick();
         }
     }
-    public void SetMap()
+
+    void OnMouseLeftClick()
     {
-        map = GameObject.FindWithTag("Map").GetComponent<MapData>();
+        Vector2 mousePosition = UF.GetMousePos();
+        GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
+        if (somethingUnderMouse == null) //Jos hiiren alla ei ole mitään niin liikutaan
+        {
+            Vector2 start = transform.position;
+            Vector2 goal = mousePosition;
+            PlayerMovement.instance.Move(transform.position, goal);
+        }
+        else
+        {
+            somethingUnderMouse.GetComponent<Interractable>().GiveActivationCommand();
+        }
     }
 
     public void SayText(string text)
@@ -81,5 +74,19 @@ public class PlayerController : MonoBehaviour
         textScript.text = text;
         yield return new WaitForSeconds(textFlatTime + textMultiplierTime * text.Length);
         textScript.text = "";
+    }
+
+    public void UseItem(Item item)
+    {
+        Vector2 mousePosition = UF.GetMousePos();
+        GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
+        if (somethingUnderMouse != null)
+        {
+            Interractable targetInterractScript = somethingUnderMouse.GetComponent<Interractable>();
+            if (targetInterractScript.key == item.name)
+            {
+                targetInterractScript.GiveActivationCommand();
+            }
+        }
     }
 }
