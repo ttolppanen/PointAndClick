@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float playerRadius;
     Rigidbody2D rb;
+    Animator animator;
     Vector2 goal;
     List<Vector2> path;
     bool shouldBeMoving;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         shouldBeMoving = false;
         ipath = 0;
@@ -41,6 +43,32 @@ public class PlayerMovement : MonoBehaviour
             Vector2 nextPoint = path[ipath];
             Vector2 movementDirection = (nextPoint - (Vector2)transform.position).normalized;
             rb.velocity = movementDirection * speed;
+
+            if (Mathf.Abs(movementDirection.x) > Mathf.Abs(movementDirection.y))
+            {
+                if(movementDirection.x >0)
+                {
+                    animator.SetInteger("Direction", 2);
+
+                }
+                else
+                {
+                    animator.SetInteger("Direction", 0);
+                }
+            }
+            else
+            {
+                if(movementDirection.y > 0)
+                {
+                    animator.SetInteger("Direction", 1);
+                }
+                else
+                {
+                    animator.SetInteger("Direction", 3);
+                }
+
+            }
+            
             if (UF.DistanceBetween2Units(transform.position, goal) < 0.05f)
             {
                 StopMoving();
@@ -51,10 +79,13 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+
     }
 
     public void Move(List<Vector2> newPath, Vector2 newGoal)
     {
+        animator.SetBool("Moving", true);
         currentTarget = null;
         newGoal = CorrectGoal(newGoal);
         newPath.Add(newGoal);
@@ -70,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     void StopMoving()
     {
+        animator.SetBool("Moving", false);
         rb.velocity = Vector2.zero;
         shouldBeMoving = false;
     }
