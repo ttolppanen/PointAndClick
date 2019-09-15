@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
 
     public float speed;
-    public MapData map;
     Rigidbody2D rb;
     Animator animator;
     Vector2 goal;
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(Vector2 goal)
     {
-        List<Vector2> newPath = map.FindPath(transform.position, goal);
+        List<Vector2> newPath = GameManager.map.FindPath(transform.position, goal);
         if (newPath.Count != 0)
         {
             animator.SetBool("Moving", true);

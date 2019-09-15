@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315a69fcff27cc646922764f31a0ea09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perspectiveValues:
+  - -0.2712
+  - 1.7527
 --- !u!1 &988511472752411682
 GameObject:
   m_ObjectHideFlags: 0

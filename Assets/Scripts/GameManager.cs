@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public static Vector2 coordinateSize = new Vector2(0.5f, 0.5f);
+    public static MapData map;
 
     private void Awake()
     {

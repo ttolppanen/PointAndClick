@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MapData : MonoBehaviour
 {
+    public float[] perspectiveValues = new float[2];
     EdgeCollider2D walls;
     PolygonCollider2D walkableArea;
 
-    private void Start()
+    private void Awake()
     {
-        PlayerMovement.instance.map = this;
+        GameManager.map = this;
         walls = GetComponent<EdgeCollider2D>();
         walkableArea = transform.GetChild(0).gameObject.AddComponent<PolygonCollider2D>();
         walkableArea.points = walls.points;

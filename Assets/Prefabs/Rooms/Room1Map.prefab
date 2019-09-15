@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315a69fcff27cc646922764f31a0ea09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perspectiveValues:
+  - -0.5277
+  - 2.082

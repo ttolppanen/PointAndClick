@@ -344,12 +344,12 @@ PrefabInstance:
     - target: {fileID: 1189055170524807668, guid: 97d06ea561c73664889a69d4135b9e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.52
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1189055170524807668, guid: 97d06ea561c73664889a69d4135b9e4e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4413218
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 1189055170524807668, guid: 97d06ea561c73664889a69d4135b9e4e,
         type: 3}
@@ -408,10 +408,6 @@ PrefabInstance:
       propertyPath: inventoryImages.Array.data[2]
       value: 
       objectReference: {fileID: 4472746959702105509}
-    - target: {fileID: 477521405, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97d06ea561c73664889a69d4135b9e4e, type: 3}
 --- !u!4 &3355811506885528144 stripped

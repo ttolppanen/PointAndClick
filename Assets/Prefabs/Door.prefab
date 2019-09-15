@@ -73,5 +73,5 @@ MonoBehaviour:
   activationPlaces:
   - {x: 6, y: 1}
   key: 0
-  sceneToLoad: Room1
+  sceneToLoad: Room2
   spawnPoint: {x: 1.5, y: 1.5}

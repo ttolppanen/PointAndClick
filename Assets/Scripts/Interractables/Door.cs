@@ -12,7 +12,7 @@ public class Door : Interractable
     {
         base.Activate();
         SceneManager.LoadScene(sceneToLoad);
-        PlayerController player = PlayerController.instance;
+        PlayerMovement player = PlayerMovement.instance;
         player.transform.position = spawnPoint;
     }
 }

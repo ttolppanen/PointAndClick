@@ -290,7 +290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  map: {fileID: 0}
 --- !u!114 &1845587742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387242256017196824}
   - component: {fileID: 6311950624356376144}
+  - component: {fileID: 4129518265996504067}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -405,3 +405,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4129518265996504067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620433673128608536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef289ee179308d4d96a5109c972c260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
