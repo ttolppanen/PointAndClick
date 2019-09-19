@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 988511472561752852}
   - component: {fileID: 988511472561752851}
   - component: {fileID: 988511472561752854}
+  - component: {fileID: 9101537392295154680}
   m_Layer: 9
   m_Name: LobbyMap
   m_TagString: Map
@@ -127,6 +128,19 @@ MonoBehaviour:
   perspectiveValues:
   - -0.2712
   - 1.7527
+--- !u!114 &9101537392295154680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988511472561752850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c99e5a5e2cf364a86dc20ae0498fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song: {fileID: 0}
 --- !u!1 &988511472752411682
 GameObject:
   m_ObjectHideFlags: 0

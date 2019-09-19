@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3100052920153074863}
   - component: {fileID: 6326737640797078536}
   - component: {fileID: 2666819123091088967}
+  - component: {fileID: 175929237468264404}
   m_Layer: 9
   m_Name: Room1Map
   m_TagString: Map
@@ -150,3 +151,16 @@ MonoBehaviour:
   perspectiveValues:
   - -0.5277
   - 2.082
+--- !u!114 &175929237468264404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595918306244564549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c99e5a5e2cf364a86dc20ae0498fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: 34a32dbd03e495248852673c21601aa8, type: 3}

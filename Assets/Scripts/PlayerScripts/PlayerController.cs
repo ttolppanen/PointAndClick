@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            GetComponent<Animator>().SetTrigger("Take");
+        }
         if (UF.IsOnUI()) { return; }
 
         if (Input.GetMouseButtonDown(0))
