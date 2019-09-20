@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public static Vector2 coordinateSize = new Vector2(0.5f, 0.5f);
     public static MapData map;
 
-    public static float musicVolume = 0.05f;
-    public static float effectVolume = 0.05f;
+    public static float musicVolume = 0.01f;
+    public static float effectVolume = 0.01f;
     AudioSource musicPlayer;
 
     private void Awake()
