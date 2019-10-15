@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         Destroy(player);
     }
 
-     IEnumerator StartSong(AudioSource player)
+    IEnumerator StartSong(AudioSource player)
     {
         while (player.volume < musicVolume)
         {
