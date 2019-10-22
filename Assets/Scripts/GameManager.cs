@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         Destroy(player);
     }
 
-     IEnumerator StartSong(AudioSource player)
+    IEnumerator StartSong(AudioSource player)
     {
         while (player.volume < musicVolume)
         {
@@ -57,5 +57,16 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         player.volume = musicVolume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+        musicPlayer.volume = musicVolume;
+    }
+
+    public void SetEffectVolume(float volume)
+    {
+        effectVolume = volume;
     }
 }
