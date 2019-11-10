@@ -1,0 +1,1445 @@
+fileFormatVersion: 2
+guid: 5447f88a1abadf54daed1a5d2b4cf5d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1514273413301506598
+    second: DoorAnim_0
+  - first:
+      213: 2744115491439852121
+    second: DoorAnim_1
+  - first:
+      213: 7445197706265233120
+    second: DoorAnim_2
+  - first:
+      213: 8491530404874010455
+    second: DoorAnim_3
+  - first:
+      213: 1242992874529340438
+    second: DoorAnim_4
+  - first:
+      213: -197855392910455247
+    second: DoorAnim_5
+  - first:
+      213: -6914201961442420614
+    second: DoorAnim_6
+  - first:
+      213: 4192217784181309860
+    second: DoorAnim_7
+  - first:
+      213: 8984610006691848137
+    second: DoorAnim_8
+  - first:
+      213: 2266702573577804800
+    second: DoorAnim_9
+  - first:
+      213: -219297368622706244
+    second: DoorAnim_10
+  - first:
+      213: 2404785685675056767
+    second: DoorAnim_11
+  - first:
+      213: 4893361417247109517
+    second: DoorAnim_12
+  - first:
+      213: 1054922835417044207
+    second: DoorAnim_13
+  - first:
+      213: 3592192782927355759
+    second: DoorAnim_14
+  - first:
+      213: -7323321401771297458
+    second: DoorAnim_15
+  - first:
+      213: 6356298590543444267
+    second: DoorAnim_16
+  - first:
+      213: -4841864914728565815
+    second: DoorAnim_17
+  - first:
+      213: 3097410489631690485
+    second: DoorAnim_18
+  - first:
+      213: 3263246111833864367
+    second: DoorAnim_19
+  - first:
+      213: -6497813732472271329
+    second: DoorAnim_20
+  - first:
+      213: -7461347996369293587
+    second: DoorAnim_21
+  - first:
+      213: 6143371008872380235
+    second: DoorAnim_22
+  - first:
+      213: 4288898944651225185
+    second: DoorAnim_23
+  - first:
+      213: -8942681075561562962
+    second: DoorAnim_24
+  - first:
+      213: -2033188576822369810
+    second: DoorAnim_25
+  - first:
+      213: 568142783036397269
+    second: DoorAnim_26
+  - first:
+      213: 606146941945153537
+    second: DoorAnim_27
+  - first:
+      213: -6573709273794511546
+    second: DoorAnim_28
+  - first:
+      213: 8170210109302259217
+    second: DoorAnim_29
+  - first:
+      213: -8003242962667790329
+    second: DoorAnim_30
+  - first:
+      213: 7601106609601101476
+    second: DoorAnim_31
+  - first:
+      213: 5964827617309930920
+    second: DoorAnim_32
+  - first:
+      213: -5454210237203656293
+    second: DoorAnim_33
+  - first:
+      213: -3501233508011732456
+    second: DoorAnim_34
+  - first:
+      213: 358789221118366298
+    second: DoorAnim_35
+  - first:
+      213: 1615307532962857593
+    second: DoorAnim_36
+  - first:
+      213: -7982446278959695864
+    second: DoorAnim_37
+  - first:
+      213: -1076770693641642083
+    second: DoorAnim_38
+  - first:
+      213: -7585253423631320337
+    second: DoorAnim_39
+  - first:
+      213: -2035128977878736387
+    second: DoorAnim_40
+  - first:
+      213: -774118805244426957
+    second: DoorAnim_41
+  - first:
+      213: 802798016246178869
+    second: DoorAnim_42
+  - first:
+      213: 5855888762535865329
+    second: DoorAnim_43
+  - first:
+      213: -6716162279310650840
+    second: DoorAnim_44
+  - first:
+      213: 5868922999508134471
+    second: DoorAnim_45
+  - first:
+      213: -4851349861323849524
+    second: DoorAnim_46
+  - first:
+      213: -6974558501123741181
+    second: DoorAnim_47
+  - first:
+      213: 8555903880774414241
+    second: DoorAnim_48
+  - first:
+      213: -862117954886575886
+    second: DoorAnim_49
+  - first:
+      213: -3008091816923249192
+    second: DoorAnim_50
+  - first:
+      213: -5384870865985651836
+    second: DoorAnim_51
+  - first:
+      213: 7155955739151603501
+    second: DoorAnim_52
+  - first:
+      213: -8080805105977882729
+    second: DoorAnim_53
+  - first:
+      213: 2231681227805141810
+    second: DoorAnim_54
+  - first:
+      213: -2826792175197156959
+    second: DoorAnim_55
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoorAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1781
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20993a4af0b7e5d4ca8ce4b1dd74acbc
+      internalID: -1514273413301506598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_1
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1781
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1041a1e1f21ac74d89e8f1a66c2315a
+      internalID: 2744115491439852121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_2
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1781
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1258ff747808064e8915498a85cb082
+      internalID: 7445197706265233120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_3
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1781
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4371a435c9cbb054b9c21778237cd936
+      internalID: 8491530404874010455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1644
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05780cab6bb552649a02c54af8dba984
+      internalID: 1242992874529340438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_5
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1644
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0b5f4590b1fe846b01c6005ff234c6
+      internalID: -197855392910455247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_6
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1644
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d847c2116220842ac5ef85da8daf2f
+      internalID: -6914201961442420614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_7
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1644
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a97703de5b19140815a88128fb1b78
+      internalID: 4192217784181309860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1507
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71c4b1c4957c7b44bde578e8f9803ae
+      internalID: 8984610006691848137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_9
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1507
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc315d1ddd2e5324d82fac50538b5ef5
+      internalID: 2266702573577804800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_10
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1507
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e586d77b7d99c418dafcdfcee778a4
+      internalID: -219297368622706244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_11
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1507
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab1e54081efc8a4c8b18f6429862964
+      internalID: 2404785685675056767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1370
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27af0a53b9a836e489fa4118d6b16300
+      internalID: 4893361417247109517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_13
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1370
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847f2bfb5995eb74485e109a47ac2d24
+      internalID: 1054922835417044207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_14
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1370
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9499ea84f09388429ec6d5dd34da445
+      internalID: 3592192782927355759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_15
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1370
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd30543f15c8f845a8cc5cb85587448
+      internalID: -7323321401771297458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1233
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a5087907521d94b86aacef2f0b41ba
+      internalID: 6356298590543444267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_17
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1233
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3530af659d7de3a43a1a0f47e19cc77f
+      internalID: -4841864914728565815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_18
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1233
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc428f80e4d034e42aec43b3b55c6ed4
+      internalID: 3097410489631690485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_19
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1233
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42704a6034ae72b45933d7510b14e89b
+      internalID: 3263246111833864367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe184d0e3222f84596f2acee2213249
+      internalID: -6497813732472271329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_21
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1096
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c9397332e79bb4aaf127779e369642
+      internalID: -7461347996369293587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_22
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1096
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4056df55f378f4392ef4ea5c2237ff
+      internalID: 6143371008872380235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_23
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1096
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8426cb56eae0f894797974d9abb88f4d
+      internalID: 4288898944651225185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 959
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb48b5e655232c04eb3ccaf926f49847
+      internalID: -8942681075561562962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_25
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 959
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c89d3e1f6cfa4408ba73b14be2e8e1
+      internalID: -2033188576822369810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_26
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 959
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749276dacd362784aad9df8331193164
+      internalID: 568142783036397269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_27
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 959
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252ab70a74acfe246b9c402cf3a00c9c
+      internalID: 606146941945153537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 822
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbfb2783cf2dde4fbc74fab8254d10a
+      internalID: -6573709273794511546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_29
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 822
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca39aa568fdcee44ba1aa404ca2ccda
+      internalID: 8170210109302259217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_30
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 822
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6358c0ac8dffb49a03196e120e77d0
+      internalID: -8003242962667790329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_31
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 822
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8066e92736877b2489fd52ab6d3235e1
+      internalID: 7601106609601101476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 685
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a64023f9a940c4ebc6878cbc368849
+      internalID: 5964827617309930920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_33
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 685
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8589ed22fcad947b04aa5f0e99bb37
+      internalID: -5454210237203656293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_34
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 685
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c44d40926bb3148b55c5e60e7e04b7
+      internalID: -3501233508011732456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_35
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 685
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cc1412db4bb554597d986c0d7c5f6e
+      internalID: 358789221118366298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 548
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde6df80bc73b2349ae64f437db44a22
+      internalID: 1615307532962857593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_37
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 548
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3af77a35d97a424aa176cc7704df0df
+      internalID: -7982446278959695864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_38
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 548
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b487d4dce9d9e0b46afca3dd8562b96d
+      internalID: -1076770693641642083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_39
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 548
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25003c5342974a4f9454f292587a830
+      internalID: -7585253423631320337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba57903cd7d25b04eb3ef0ef4620402d
+      internalID: -2035128977878736387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_41
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 411
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430b1b0f811dc544c9c995ca9d211d9f
+      internalID: -774118805244426957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_42
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 411
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07feca91d2bb93a4cb3a375059984314
+      internalID: 802798016246178869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_43
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 411
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b3d396b3f702c4e9f847cc3b403191
+      internalID: 5855888762535865329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64719b3a5c099ba4798b62e30cf28a05
+      internalID: -6716162279310650840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_45
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 274
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd9764c19b0a6c43ac66bf58832f4a2
+      internalID: 5868922999508134471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_46
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 274
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa3933542d88474a846cef564606e51
+      internalID: -4851349861323849524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_47
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 274
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fb9189e1fc6d24786675ed30cbac74
+      internalID: -6974558501123741181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36642447a10c1a647b56aab00e4b4460
+      internalID: 8555903880774414241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_49
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 137
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbfb38fe5ecfde48b38ee77eeb27540
+      internalID: -862117954886575886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_50
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 137
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07a632bed1884d4aafe62df5d4d1678
+      internalID: -3008091816923249192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_51
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 137
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2f135b4084fc0408cc03aa6ebd0c8d
+      internalID: -5384870865985651836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1bd88b2655dff42b86ca2d38e9bf60
+      internalID: 7155955739151603501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_53
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 0
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf6783f4e570a14e9e2182a5afdc1c4
+      internalID: -8080805105977882729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_54
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 0
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93132782aabfc5c4da9c398f354f52ac
+      internalID: 2231681227805141810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorAnim_55
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 0
+        width: 480
+        height: 135
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d284a4c5e86d06c499479161cce1ea21
+      internalID: -2826792175197156959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4df4a1229e0d8494ba38ed98bf4eb452
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
