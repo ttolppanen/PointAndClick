@@ -1,49 +1,43 @@
 fileFormatVersion: 2
-guid: 13c858b45ba199544862ce9396b5d152
+guid: e5b20c7bb07b16a44b4f54f7014e1b19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3574756940207250479
-    second: SLdie4_0
+      213: -788064899815462631
+    second: Slide4Stairs 1_0
   - first:
-      213: 5642350314297506236
-    second: SLdie4_1
+      213: 6241553575756144691
+    second: Slide4Stairs 1_1
   - first:
-      213: 401712869914102777
-    second: SLdie4_2
+      213: -1041554774399890912
+    second: Slide4Stairs 1_2
   - first:
-      213: -4886015062982586721
-    second: SLdie4_3
+      213: -6827949277863393655
+    second: Slide4Stairs 1_3
   - first:
-      213: -134519164640030711
-    second: SLdie4_4
+      213: 4019826808626102393
+    second: Slide4Stairs 1_4
   - first:
-      213: -1839443807004718283
-    second: SLdie4_5
+      213: -979978811318894866
+    second: Slide4Stairs 1_5
   - first:
-      213: 3343912155831480464
-    second: SLdie4_6
+      213: -5017984258682418199
+    second: Slide4Stairs 1_6
   - first:
-      213: 4259459165776352419
-    second: SLdie4_7
+      213: 2509387764636476239
+    second: Slide4Stairs 1_7
   - first:
-      213: -9140566088730071341
-    second: SLdie4_8
+      213: -8374464722912815849
+    second: Slide4Stairs 1_8
   - first:
-      213: 6716885488465934110
-    second: SLdie4_9
+      213: 9169215561368819526
+    second: Slide4Stairs 1_9
   - first:
-      213: 5486843073049500071
-    second: SLdie4_10
+      213: -4905408684630233371
+    second: Slide4Stairs 1_10
   - first:
-      213: -9209958037686629666
-    second: SLdie4_11
-  - first:
-      213: -2822721620185338895
-    second: SLdie4_12
-  - first:
-      213: -1355207784050899105
-    second: SLdie4_13
+      213: -2529168006360802595
+    second: Slide4Stairs 1_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -126,7 +120,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SLdie4_0
+      name: Slide4Stairs 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -140,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a16a728437426b247a13d78a40daf969
-      internalID: -3574756940207250479
+      spriteID: a6259010b88a1a04686e14a8524476f5
+      internalID: -788064899815462631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_1
+      name: Slide4Stairs 1_1
       rect:
         serializedVersion: 2
         x: 960
@@ -161,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb2981fccab019847af6e1a1f7ba7de9
-      internalID: 5642350314297506236
+      spriteID: 7b719e654fb6e4746bc9d040c9394ed9
+      internalID: 6241553575756144691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_2
+      name: Slide4Stairs 1_2
       rect:
         serializedVersion: 2
         x: 1920
@@ -182,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad307ed8dacf29429348c3241207532
-      internalID: 401712869914102777
+      spriteID: 73c2c6d7f3aad99418397f19f9605316
+      internalID: -1041554774399890912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_3
+      name: Slide4Stairs 1_3
       rect:
         serializedVersion: 2
         x: 2880
@@ -203,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d54134e8b5ac5a048b39ddc9591f3a63
-      internalID: -4886015062982586721
+      spriteID: 298e5e056c33ca1428ef015c0c23d916
+      internalID: -6827949277863393655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_4
+      name: Slide4Stairs 1_4
       rect:
         serializedVersion: 2
         x: 3840
@@ -224,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 830c0856ddc312348a0e788807c2640c
-      internalID: -134519164640030711
+      spriteID: 4df3fe49381f85a47aaa246d39ea4f76
+      internalID: 4019826808626102393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_5
+      name: Slide4Stairs 1_5
       rect:
         serializedVersion: 2
         x: 4800
@@ -245,35 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d284c4c4d57fcc249a10e8ea1a4e26ae
-      internalID: -1839443807004718283
+      spriteID: 83492b7622cdecd41abb81e9daf51bae
+      internalID: -979978811318894866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_6
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 270
-        width: 960
-        height: 270
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 600205d154e98ef42a8f38460fbf5d54
-      internalID: 3343912155831480464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SLdie4_7
+      name: Slide4Stairs 1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -287,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1cb3256194224043b3e674c416dca7f
-      internalID: 4259459165776352419
+      spriteID: d6ba78f2496fe174c868eace8c09a139
+      internalID: -5017984258682418199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_8
+      name: Slide4Stairs 1_7
       rect:
         serializedVersion: 2
         x: 960
@@ -308,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156dc8b052bf9b04dbd3f8116b37425e
-      internalID: -9140566088730071341
+      spriteID: afc244c878289a642908e89f34b50341
+      internalID: 2509387764636476239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_9
+      name: Slide4Stairs 1_8
       rect:
         serializedVersion: 2
         x: 1920
@@ -329,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f019f240aefe0ea4e9958d5e98e789b8
-      internalID: 6716885488465934110
+      spriteID: 824d13ddfbe1d664593d211fd4f1f0fc
+      internalID: -8374464722912815849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_10
+      name: Slide4Stairs 1_9
       rect:
         serializedVersion: 2
         x: 2880
@@ -350,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f388620ea08864eafae654d9a3964a
-      internalID: 5486843073049500071
+      spriteID: d0285b772e5c2d64d88dbc94e4e75c88
+      internalID: 9169215561368819526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_11
+      name: Slide4Stairs 1_10
       rect:
         serializedVersion: 2
         x: 3840
@@ -371,14 +344,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c64bd31ef23c249a650593f0283eeb
-      internalID: -9209958037686629666
+      spriteID: 4e3f5d3fc33aaad45ab77830ce37dfcf
+      internalID: -4905408684630233371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SLdie4_12
+      name: Slide4Stairs 1_11
       rect:
         serializedVersion: 2
         x: 4800
@@ -392,29 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3773de3ac0513744a91d953f2716c2b7
-      internalID: -2822721620185338895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SLdie4_13
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 960
-        height: 270
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ccd3eaea9f87624c928d24c31a341e0
-      internalID: -1355207784050899105
+      spriteID: b6e1c4c94cee876479a3722b02c3a161
+      internalID: -2529168006360802595
       vertices: []
       indices: 
       edges: []
@@ -422,7 +374,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cae364c1a24988a4fbbaf5cf67100fc4
+    spriteID: 97fd63bd68509bc499b6950d01692df9
     internalID: 0
     vertices: []
     indices: 

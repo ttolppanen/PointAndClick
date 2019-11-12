@@ -11,6 +11,7 @@ public class IntroController : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public List<GameObject> slides;
     GameObject currentSlide;
+    Animator anim;
     List<string> slide1Texts = new List<string>
     {
         "London, England 6th of January 1900:",
@@ -98,27 +99,80 @@ public class IntroController : MonoBehaviour
         "It’s cold.... got caught by a blizzard, no idea where we are. Some got separated, not found. down to 4 men, " +
         "not going to make it. I hope, someone finds us."
     };
+    List<string> slide5Texts = new List<string>
+    {
+        "Alexis: Any idea where we are?",
+        "Sir Alister: Quit yappin, all we have to do is follow the sun. We’ll get to our boats eventually.",
+        "John: How much food do we have left?",
+        "Alexis: About three days worth, most of it was lost with the others. Buried somewhere.",
+        "Jack: Shit, does anyone else not feel their leg?",
+        "John: No one can feel their fucking legs! It’s cold, and we just got through a blizzard! We’ve got to get to a " +
+        "windfall, there we can warm up.",
+        "Alexis: The landscape doesn’t seem right, I don’t remember any of this.",
+        "Sir Alister: Of course you dont! The blizzard shapes and shifts the snow each time it happens. No landmark " +
+        "will give us certainty we’re going the right way.",
+
+        "",
+
+        "Jack: What about that? A blizzard cant just magick into existence a mountain! We’re definitely not " +
+        "anywhere close to our original route.",
+        "John: That’ll provide windfall for us, lets go to it.",
+        "Sir Alister: Alright, head for that mountain. We’ve gotta warmup and try and see where we are on the map. " +
+        "A mountain this size will definitely be marked.",
+
+        "",
+
+        "Alexis: Holy shit! Look! Someone’s carved a doorway into that mountain! We should go and look if there’s" +
+        "anyone there.",
+        "John: If we can get in it’ll provide a windfall, as well as a safe place to spend as much time as we’re able, --- " +
+        "given our meagre rations--.",
+        "Jack: LETS JUST GET THERE, I DONT WANNA FREEZE.",
+        "Sir Alister: Alright, let’s go."
+    };
+    List<string> slide6Texts = new List<string>
+    {
+        "Sir Alister: Ok, now let’s hoist our sled up those stairs.",
+        "Jack: Are you a fucking idiot?! Let’s just get inside, I wanna feel my legs again.",
+        "Alexis: I don’t think we should waste our strength—",
+        "Sir Alister: SHUT UP. If another blizzard hits, and buries our sled, we’re fucked! Now get to work, it’s what I " +
+        "paid you for."
+    };
+    List<string> slide7Texts = new List<string>
+    {
+        "Alexis: There are symbols carved into the stone, where could this have come from? There is no peoples " +
+        "here---",
+        "Jack: It’s not budging, hey you posh cunt, bring me a crowbar and stop runnin your mouth.",
+        "Alexis: Oh, uh. Sure.",
+        "Jack: Alright, now Alister grab this with me and lets wrench this door open.",
+        "Sir Alister: Watch your tongue, we need to have an order if we are to survive this. We’ll pull this together now.",
+
+        "",
+
+        "Sir Alister: Everyone in!"
+    };
     List<List<string>> allTexts;
     List<string> currentTexts;
 
     bool fading = false;
     bool writing = false;
+    bool inAnimation = false;
     int slideIndex = 0;
     int textIndex = 0;
 
     private void Start()
     {
-        allTexts = new List<List<string>> {slide1Texts, slide2Texts, slide3Texts, slide4Texts};
+        allTexts = new List<List<string>> {slide1Texts, slide2Texts, slide3Texts, slide4Texts, slide5Texts, slide6Texts, slide7Texts};
         currentTexts = slide1Texts;
-        currentSlide = slides[0];
+        currentSlide = slides[slideIndex];
         StartCoroutine(FadeIn());
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !fading && !writing)
+        if (Input.GetKeyDown(KeyCode.Space) && !fading && !writing && !inAnimation)
         {
-            if (textIndex >= currentTexts.Count)
+            if (textIndex >= currentTexts.Count) //Jos pitää vaihtaa sliden tekstiä
             {
                 slideIndex += 1;
                 if (slideIndex >= slides.Count)
@@ -130,14 +184,31 @@ public class IntroController : MonoBehaviour
                     textIndex = 0;
                     currentTexts = allTexts[slideIndex];
                     StartCoroutine(FadeOut());
+                    if (slideIndex == 6)//portaat ylös
+                    {
+                        BeginAnimation("Stairs");
+                        inAnimation = false;
+                    }
                 }
             }
             else
             {
-                writing = true;
-                textComponent.text = "";
-                StartCoroutine(WriteText(currentTexts[textIndex], 0));
-                textIndex += 1;
+                if (slideIndex == 4 && textIndex == 7)
+                {
+                    BeginAnimation("MountainAppears");
+                    textIndex += 1;
+                }
+                else if (slideIndex == 4 && textIndex == 11)
+                {
+                    BeginAnimation("MountainVisible");
+                    textIndex += 1;
+                }
+                else if (slideIndex == 6 && textIndex == 4)
+                {
+                    BeginAnimation("DoorOpening");
+                    textIndex += 1;
+                }
+                WriteText();
             }
         }
     }
@@ -146,6 +217,7 @@ public class IntroController : MonoBehaviour
     {
         fading = true;
         Color fadeColor = fade.color;
+        Color textColor = textComponent.color;
         if (fadeColor.a >= 1)
         {
             StartCoroutine(FadeIn());
@@ -156,6 +228,8 @@ public class IntroController : MonoBehaviour
         }
         fadeColor.a += fadeTime / 100;
         fade.color = fadeColor;
+        textColor.a -= fadeTime / 100;
+        textComponent.color = textColor;
         yield return new WaitForSeconds(0.01f);
         StartCoroutine(FadeOut());
     }
@@ -167,10 +241,10 @@ public class IntroController : MonoBehaviour
         if (fadeColor.a <= 0)
         {
             fading = false;
-            writing = true;
-            textComponent.text = "";
-            StartCoroutine(WriteText(currentTexts[textIndex], 0));
-            textIndex += 1;
+            WriteText();
+            Color textColor = textComponent.color;
+            textColor.a = 1;
+            textComponent.color = textColor;
             yield break;
         }
         fadeColor.a -= fadeTime / 100;
@@ -179,7 +253,7 @@ public class IntroController : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    IEnumerator WriteText(string text, int i)
+    IEnumerator WriteTextCoroutine(string text, int i)
     {
         if (i >= text.Length)
         {
@@ -188,6 +262,27 @@ public class IntroController : MonoBehaviour
         }
         textComponent.text = textComponent.text + text[i];
         yield return new WaitForSeconds(textUpdateTime);
-        StartCoroutine(WriteText(text, i + 1));
+        StartCoroutine(WriteTextCoroutine(text, i + 1));
+    }
+
+    void BeginAnimation(string animationName)
+    {
+        textComponent.text = "";
+        inAnimation = true;
+        anim.SetTrigger(animationName);
+    }
+
+    public void ExitAnimation()
+    {
+        inAnimation = false;
+        WriteText();
+    }
+
+    void WriteText()
+    {
+        writing = true;
+        textComponent.text = "";
+        StartCoroutine(WriteTextCoroutine(currentTexts[textIndex], 0));
+        textIndex += 1;
     }
 }
