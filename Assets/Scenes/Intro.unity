@@ -368,8 +368,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1514273413301506598, guid: 5447f88a1abadf54daed1a5d2b4cf5d9,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 687849842b1437d4bb56f78e1c682556, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5354,6 +5353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274573960}
   - component: {fileID: 1274573961}
+  - component: {fileID: 1274573962}
   m_Layer: 0
   m_Name: Slide1
   m_TagString: Untagged
@@ -5412,7 +5412,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3a3b93470ba17643baa4ab958063e3d, type: 3}
+  m_Sprite: {fileID: -1881644140800317554, guid: e6417b59e1dd9a244bdae9823578f9c9,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5423,6 +5424,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1274573962
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274573959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db98984974ee9c843a668981ae63aaf4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1307195595
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,9 +5501,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0bd1888a74660234aaee653b3a22ea51, type: 2}
   m_sharedMaterial: {fileID: -6599981508664611741, guid: 0bd1888a74660234aaee653b3a22ea51,
@@ -5550,16 +5568,16 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -329.95532, y: -19.77835, z: -345.05383, w: -130.37431}
+  m_margin: {x: -704.5559, y: 41.65558, z: -788.0493, w: -361.83627}
   m_textInfo:
     textComponent: {fileID: 1307195597}
-    characterCount: 1
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -6084,7 +6102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36c3b0d2a3ffc55439ca0ca4e2e13911, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fe9419368623ed40b6b55eaced85c5f, type: 3}
   m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   m_FlipX: 0
   m_FlipY: 0

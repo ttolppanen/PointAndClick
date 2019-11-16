@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class IntroController : MonoBehaviour
@@ -139,7 +140,7 @@ public class IntroController : MonoBehaviour
     };
     List<string> slide7Texts = new List<string>
     {
-        "Alexis: There are symbols carved into the stone, where could this have come from? There is no peoples " +
+        "Alexis: There are symbols carved into the stone, where could this have come from? There are no peoples " +
         "here---",
         "Jack: It’s not budging, hey you posh cunt, bring me a crowbar and stop runnin your mouth.",
         "Alexis: Oh, uh. Sure.",
@@ -177,7 +178,7 @@ public class IntroController : MonoBehaviour
                 slideIndex += 1;
                 if (slideIndex >= slides.Count)
                 {
-                    print("Vaihda scene");
+                    StartCoroutine(FadeOut());
                 }
                 else
                 {
@@ -220,6 +221,11 @@ public class IntroController : MonoBehaviour
         Color textColor = textComponent.color;
         if (fadeColor.a >= 1)
         {
+            if (slideIndex >= slides.Count)
+            {
+                SceneManager.LoadScene("Lobby");
+                yield break;
+            }
             StartCoroutine(FadeIn());
             currentSlide.SetActive(false);
             currentSlide = slides[slideIndex];
