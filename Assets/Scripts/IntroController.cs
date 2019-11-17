@@ -23,7 +23,7 @@ public class IntroController : MonoBehaviour
         "My father is a pious man who raised me in " +
         "a most loving and caring environment, I know the values of kindess, humility and understanding. I dare say " +
         "that my father is an upstanding beacon of light in our community! Not that that would, or should, reflect on " +
-        "my character. ",
+        "my character.",
 
         "I’m going to be part of an expedition to the north pole, led by Sir Alister Barton. I’ve been terribly excited about all " +
         "this, you see, It’s been my true hearts desire to explore land that no human eyes have laid eyes upon " +
@@ -31,10 +31,11 @@ public class IntroController : MonoBehaviour
 
         "I wish to share all that with the world, which is what this " +
         "journal is for. We’re wintering here in London while Sir Alister gathers a hearty crew for us to adventure " +
-        "together with. ", 
+        "together with.", 
 
         "The lodgings here are meagre, but I’ve been assured that we need all the pounds we can spare spent on the " +
-        "equipment we will take with us. I’m no expert in explorers equipment so I will leave that to those who are. I " +
+        "equipment we will take with us.",
+        "I’m no expert in explorers equipment so I will leave that to those who are. I " +
         "will be updating my journal at every significant point in our journey."
     };
     List<string> slide2Texts = new List<string>
@@ -63,7 +64,9 @@ public class IntroController : MonoBehaviour
 
         "But since my language skills are good, and I had some money, I made " +
         "my way to England where, after a bit of searching, I found Sir Alister who just so happened to be searching " +
-        "for a crew. He agreed to let me join his crew, after I contributed my fair share to the funding, of course.",
+        "for a crew.",
+        
+        "He agreed to let me join his crew, after I contributed my fair share to the funding, of course.",
 
         "I must go now, I’m meeting the rest of the crew at the docks this afternoon, and I better get ready."
     };
@@ -72,7 +75,7 @@ public class IntroController : MonoBehaviour
         "On board Aurora, somewhere in the Norwegian Sea 1st of March 1900.",
 
         "Well, we’ve set off, and I must say staying on a ship is a touch less romantic than it seems at first blush. I’ve been " +
-        "heaving my guts out for the last week, but I’m feeling better. " +
+        "heaving my guts out for the last week, but I’m feeling better. ",
         "Once we found the Aurora things moved quite fast, I was " +
         "introduced to the crew and we set off, taking with us all the equipment we could strap to ourselves along with a sled.",
         
@@ -259,16 +262,18 @@ public class IntroController : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    IEnumerator WriteTextCoroutine(string text, int i)
+    IEnumerator WriteTextCoroutine(int i, int textLength)
     {
-        if (i >= text.Length)
+        textComponent.maxVisibleCharacters = i;
+        yield return new WaitForSeconds(textUpdateTime);
+        if (i >= textLength)
         {
             writing = false;
-            yield break;
         }
-        textComponent.text = textComponent.text + text[i];
-        yield return new WaitForSeconds(textUpdateTime);
-        StartCoroutine(WriteTextCoroutine(text, i + 1));
+        else
+        {
+            StartCoroutine(WriteTextCoroutine(i + 1, textLength));
+        }
     }
 
     void BeginAnimation(string animationName)
@@ -287,8 +292,8 @@ public class IntroController : MonoBehaviour
     void WriteText()
     {
         writing = true;
-        textComponent.text = "";
-        StartCoroutine(WriteTextCoroutine(currentTexts[textIndex], 0));
+        textComponent.text = currentTexts[textIndex];
+        StartCoroutine(WriteTextCoroutine(1, currentTexts[textIndex].Length));
         textIndex += 1;
     }
 }

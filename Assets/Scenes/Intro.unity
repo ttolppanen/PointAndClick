@@ -5530,8 +5530,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5568,7 +5568,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -704.5559, y: 41.65558, z: -788.0493, w: -361.83627}
+  m_margin: {x: -730, y: 35, z: -730, w: -360}
   m_textInfo:
     textComponent: {fileID: 1307195597}
     characterCount: 0
@@ -5724,7 +5724,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 1608352032}
   m_TextComponent: {fileID: 1307195597}
   m_materialReferenceIndex: 1
