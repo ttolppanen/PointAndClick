@@ -16,6 +16,7 @@ public class ItemPickup : Interractable
     public override void Activate()
     {
         base.Activate();
+        PlayerController.instance.anim.SetTrigger("Take");
         Inventory.instance.AddItem(item);
         Destroy(gameObject);
     }

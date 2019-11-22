@@ -7,8 +7,13 @@ public class Interractable : MonoBehaviour
     public List<Vector2> activationPlaces;
     public ItemEnum key = ItemEnum.noItem;
 
-    public virtual void GiveActivationCommand()
+    public virtual void GiveActivationCommand(ItemEnum activationItem)
     {
+        if (key != activationItem)
+        {
+            print("Tarvitsee jotain käytettäväksi.......");
+            return;
+        }
         if (activationPlaces.Count == 0) //Jos voi aktivoida mistä vain
         {
             Activate();
