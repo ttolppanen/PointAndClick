@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float textFlatTime;
     public float textMultiplierTime;
     IEnumerator OnGoingTextCoroutine;
+    public Animator anim;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         PM = PlayerMovement.instance;
     }
 
@@ -36,17 +38,17 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            GetComponent<Animator>().SetTrigger("Take");
+            anim.SetTrigger("Take");
         }
         if (UF.IsOnUI()) { return; }
 
         if (Input.GetMouseButtonDown(0))
         {
-            OnMouseLeftClick();
+            OnMouseLeftClick(ItemEnum.noItem);
         }
     }
 
-    void OnMouseLeftClick()
+    public void OnMouseLeftClick(ItemEnum itemInHand)
     {
         Vector2 mousePosition = UF.GetMousePos();
         GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            somethingUnderMouse.GetComponent<Interractable>().GiveActivationCommand();
+            somethingUnderMouse.GetComponent<Interractable>().GiveActivationCommand(itemInHand);
         }
     }
 
@@ -75,19 +77,5 @@ public class PlayerController : MonoBehaviour
         textScript.text = text;
         yield return new WaitForSeconds(textFlatTime + textMultiplierTime * text.Length);
         textScript.text = "";
-    }
-
-    public void UseItem(Item item)
-    {
-        Vector2 mousePosition = UF.GetMousePos();
-        GameObject somethingUnderMouse = UF.FetchGameObject(UF.GetMousePos(), LayerMask.GetMask("Interractable"));
-        if (somethingUnderMouse != null)
-        {
-            Interractable targetInterractScript = somethingUnderMouse.GetComponent<Interractable>();
-            if (targetInterractScript.key == item.name)
-            {
-                targetInterractScript.GiveActivationCommand();
-            }
-        }
     }
 }

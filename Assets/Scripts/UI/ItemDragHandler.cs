@@ -21,7 +21,8 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.localPosition = startingPoint;
-        int itemIndex =  (int)char.GetNumericValue(gameObject.name[0]);
-        PlayerController.instance.UseItem(Inventory.instance.inventory[itemIndex]);
+        int itemIndex =  (int)char.GetNumericValue(gameObject.name[0]); //Objektin nimestä indeksi...
+        ItemEnum itemName = Inventory.instance.inventory[itemIndex].name;
+        PlayerController.instance.OnMouseLeftClick(itemName);
     }
 }
