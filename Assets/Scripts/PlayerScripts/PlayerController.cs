@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using TMPro;
+using UnityEngine.Playables;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float textMultiplierTime;
     IEnumerator OnGoingTextCoroutine;
     public Animator anim;
+    public PlayableDirector pd;
 
     private void Awake()
     {
